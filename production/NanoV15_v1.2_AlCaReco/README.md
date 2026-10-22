@@ -84,7 +84,17 @@ sizes are those of the Events trees of the test files. A calibration output file
       --comment "WMass AlCaReco nano, Upsilon" cms:$ds 1 T2_US_MIT
   done
   ```
-  - rule IDs: _to be filled in_;
+  The rules were created on 2026-10-22 and expire on 2026-11-21:
+
+  | dataset | rule |
+  |---|---|
+  | MuOnia Run2016F | `7f0563e2782a4d3983f768cf3a85bd52` |
+  | MuOnia Run2016G | `44416e6fe66649b285a7c797e56b696c` |
+  | MuOnia Run2016H | `5bb1153d2ff243f2b7780b7bc1bff145` |
+  | Upsilon_MultiResonanceFilter Pt0to8 | `60749562c7bb45338a431fc7fd40647c` |
+  | Upsilon_MultiResonanceFilter Pt8to13 | `042cdd50d2944b4f804fd9719acc0d23` |
+  | Upsilon_MultiResonanceFilter Pt13toInf | `46c4e403ce3a4aca8c320cf50a544700` |
+
   - `rucio list-rules --account dwalter` shows the rules `REPLICATING`, then `OK`; `WAITING_APPROVAL` means the
     request fell outside the automatic approval;
   - submit the Upsilon tasks when the rules are `OK`, and extend the lifetime

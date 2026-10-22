@@ -84,7 +84,7 @@ sizes are those of the Events trees of the test files. A calibration output file
       --comment "WMass AlCaReco nano, Upsilon" cms:$ds 1 T2_US_MIT
   done
   ```
-  The rules were created on 2026-10-22 and expire on 2026-11-21:
+  The rules were created on 2026-10-22, were approved automatically, and expire on 2026-11-21:
 
   | dataset | rule |
   |---|---|

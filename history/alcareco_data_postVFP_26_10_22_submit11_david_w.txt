@@ -1,0 +1,47 @@
+Submit log for inputs: inputs/alcareco_data_postVFP.txt
+Auto-generated with command ./scripts/prepareCrab.py -i inputs/alcareco_data_postVFP.txt -v v1p2 --site T3_US_MIT --storage /store/group/zmass/NanoAOD -m /Charmonium --calib -j 2 --submit 1 1
+Script ran at 2026-10-22 19:31:18.485764
+Git hash of scripts is "679c653d46602548a1c91cefc08df4ae935185a7"
+Git hash of CMSSW is "8af6576483fe0bbe4b818a92112d41ae244d788b"
+
+Git diff of scripts is 
+
+Git diff of CMSSW is 
+
+--------------------------------------------------------------------------------
+
+Running command: crab submit /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Will use CRAB configuration file /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+Finished importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+Sending the request to the server at cmsweb.cern.ch
+Success: Your task has been delivered to the prod CRAB3 server.
+Task name: 261022_233200:dwalter_crab_Charmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Project dir: crab_projects/crab_Charmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Please use ' crab status -d crab_projects/crab_Charmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2 ' to check how the submission process proceeds.
+Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_Charmonium_Run2016F-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2/crab.log
+
+Running command: crab submit /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Will use CRAB configuration file /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+Finished importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+Sending the request to the server at cmsweb.cern.ch
+Success: Your task has been delivered to the prod CRAB3 server.
+Task name: 261022_233235:dwalter_crab_Charmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Project dir: crab_projects/crab_Charmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Please use ' crab status -d crab_projects/crab_Charmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2 ' to check how the submission process proceeds.
+Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_Charmonium_Run2016G-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2/crab.log
+
+Running command: crab submit /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Will use CRAB configuration file /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/submitCharmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib.py
+Importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+Finished importing CMSSW configuration ../configs/NanoV15TkAlJpsiMuMuCalibDataPostVFP_cfg.py
+You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+Sending the request to the server at cmsweb.cern.ch
+Success: Your task has been delivered to the prod CRAB3 server.
+Task name: 261022_233309:dwalter_crab_Charmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Project dir: crab_projects/crab_Charmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2
+Please use ' crab status -d crab_projects/crab_Charmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2 ' to check how the submission process proceeds.
+Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_Charmonium_Run2016H-TkAlJpsiMuMu-21Feb2020_UL2016-v1_Calib_v1p2/crab.log

@@ -22,7 +22,9 @@ tracker-alignment AlCaReco skims with the CVH single-track refit of the custom N
 **Six productions:** J/psi data and MC in both versions, Upsilon data and MC in the default version.
 
 - **Code:** tag `NanoV15_v1.2` in both repositories (WMass/cmssw `WmassNanoProd_15_0_19_patch2`, WMass/WMassNanoProduction
-  `main`).
+  `main`). The J/psi calibration version was submitted before the merge, from the heads of WMass/cmssw#51
+  (`8af6576483f`) and WMass/WMassNanoProduction#31 (`679c653`), which are the code of the tag: #51 is not behind
+  its base, and the base commits #31 does not have change only history files and the v1.0 runbook.
 - **Inputs:** `inputs/alcareco_data_postVFP.txt` and `inputs/alcareco_mc_postVFP.txt`, the samples of AN-21-131. Events
   and replicas are in `inputs/INVENTORY_ALCARECO_261016.md`.
 - **Output:** site `T3_US_MIT`, LFN `/store/group/zmass/NanoAOD`, i.e.
@@ -30,7 +32,8 @@ tracker-alignment AlCaReco skims with the CVH single-track refit of the custom N
   - Output tags `NanoV15<skim>[Calib]Run<era>DataPostVFP_v1p2` and `NanoV15<skim>[Calib]MCPostVFP_v1p2`, e.g.
     `NanoV15TkAlJpsiMuMuCalibRun2016HDataPostVFP_v1p2`.
   - CRAB label `-v v1p2`.
-- **Jobs:** `EventAwareLumiBased`, 8 CPU hours each, about 2.2 h with 4 threads, 8000 MB (peak 2.2 GB).
+- **Jobs:** `EventAwareLumiBased`, 8 CPU hours each. The calibration version runs with 2 threads (`-j 2`: 2 cores,
+  4000 MB, about 4.5 h), the default version with 4 (8000 MB, about 2.2 h); the peak memory is 1.9–2.2 GB.
 
 | version | data [s CPU/event] | MC [s CPU/event] | events/job (data / MC) | output [kB/event] (data / MC) |
 |---|---|---|---|---|
@@ -41,6 +44,11 @@ The calibration version takes 3.8x the CPU of the default version in data and 2.
 on the same events (2281 J/psi 2016H events: 0.137 vs 0.036 s/event; 2000 UL16 J/psi Pt8toInf events: 0.184 vs
 0.076 s/event), and is scaled to the grid with the default version's numbers (README, "Job size"). The output
 sizes are those of the Events trees of the test files. A calibration output file is about 3 GB.
+
+The calibration version does not use 4 threads well. On the same 3000 J/psi 2016H events (read in order from a
+local file, on submit82) its event loop used 0.84 cores with 1 thread, 1.62 with 2 and 2.19 with 4, at 0.137,
+0.139 and 0.148 s CPU/event; with 2 threads a core does 1.6x the work it does with 4. The output does not
+depend on the number of threads.
 
 | dataset | events (DAS) | on disk at | jobs, default | jobs, calibration |
 |---|---|---|---|---|
@@ -130,15 +138,16 @@ events per job and the number of jobs; the second submits. Between the two, chec
 grep -h "numCores\|maxMemoryMB\|inputDataset\|splitting\|unitsPerJob\|outLFNDirBase\|outputDatasetTag\|storageSite" crab_submit/submit*.py
 ```
 
-They must show 4 cores, 8000 MB, `EventAwareLumiBased`, the events per job of the first table in step 0,
+They must show 2 cores and 4000 MB (calibration version) or 4 cores and 8000 MB (default version),
+`EventAwareLumiBased`, the events per job of the first table in step 0,
 `/store/group/zmass/NanoAOD`, the output tag (with `Calib` for the calibration version) and `T3_US_MIT`.
 
 | production | list | options |
 |---|---|---|
 | J/psi data, default | `inputs/alcareco_data_postVFP.txt` | `-m '/Charmonium'` |
-| J/psi data, calibration | `inputs/alcareco_data_postVFP.txt` | `-m '/Charmonium' --calib` |
+| J/psi data, calibration | `inputs/alcareco_data_postVFP.txt` | `-m '/Charmonium' --calib -j 2` |
 | J/psi MC, default | `inputs/alcareco_mc_postVFP.txt` | `-m '/JPsiToMuMu'` |
-| J/psi MC, calibration | `inputs/alcareco_mc_postVFP.txt` | `-m '/JPsiToMuMu' --calib` |
+| J/psi MC, calibration | `inputs/alcareco_mc_postVFP.txt` | `-m '/JPsiToMuMu' --calib -j 2` |
 | Upsilon data, default (after the recall) | `inputs/alcareco_data_postVFP.txt` | `-m '/MuOnia'` |
 | Upsilon MC, default (after the recall) | `inputs/alcareco_mc_postVFP.txt` | `-m '/Upsilon'` |
 

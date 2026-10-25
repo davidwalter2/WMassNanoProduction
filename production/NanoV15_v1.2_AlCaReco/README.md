@@ -172,6 +172,15 @@ and every submission is appended to `history/<list>_<date>_submit11_<user>.txt`.
 As step 4 of the v1.0 runbook: `crab status -d <dir>` once or twice a day, the exit-code table there, and the
 task's Grafana page (the `Dashboard monitoring URL` line of `crab status`).
 
+All output reaches T3_US_MIT through one WebDAV door, submit55. From 2026-10-23 04:00 to 2026-10-25 ~12:00 UTC
+transfers into it broke down, while about 2,500 calibration outputs of 3 GB each (7.4 TB) were queued for it.
+CRAB gave up on the queued transfers (FTS queue timeouts, `Connection terminated abruptly` pulls) and deleted
+the outputs from the temporary area, so 2,792 jobs had to be rerun. The calibration version is therefore
+(re)submitted in batches, and the next batch only goes when the previous one has landed:
+
+- watch the arrivals (`find <output dir> -name '*.root' -mmin -60 | wc -l`) and the `transferring` count;
+- the default version (0.7 GB per job) and the calibration version (3 GB) are not resubmitted at the same time.
+
 - All J/psi inputs are on disk at T2_CH_CERN only, so the jobs may wait there.
 - The run-boundary crash (exit code 8901 in data, v1.0 runbook) is fixed since `NanoV15_v1.1`. An 8901 is treated
   like the other codes: resubmit, and report it in the issue if it repeats.

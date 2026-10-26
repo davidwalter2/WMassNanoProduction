@@ -114,8 +114,14 @@ depend on the number of threads. Both run with 2 threads: 1 thread would leave t
 
   - `rucio list-rules --account dwalter` shows the rules `REPLICATING`, then `OK`; `WAITING_APPROVAL` means the
     request fell outside the automatic approval;
-  - submit the Upsilon tasks when the rules are `OK`, and extend the lifetime
-    (`rucio update-rule --lifetime <seconds> <rule id>`) if the production runs longer.
+  - submit a dataset's task when its rule is `OK`, and extend the lifetime
+    (`rucio update-rule --lifetime <seconds> <rule id>`) if the production runs longer. The four datasets that
+    were on disk first (MuOnia Run2016F and G, Upsilon Pt0to8 and Pt13toInf) were submitted on 2026-10-26
+    with `-m '/MuOnia/Run2016[FG]-'` and `-m '/Upsilon_MultiResonanceFilter_Pt(0to8|13toInf)-'`; MuOnia Run2016H
+    and Upsilon Pt8to13 follow with `-m '/MuOnia/Run2016H-'` and `-m '/Upsilon_MultiResonanceFilter_Pt8to13-'`;
+  - the jobs run at T2_US_MIT, which reads its own data through the ESnet XCache
+    (`bost-cms-xcache01.lhcone.es.net`); for local tests use `root://t2dsk0011.cmsaf.mit.edu/`, as the
+    `xrootd.cmsaf.mit.edu` redirector can refuse files that are on disk.
 - **J/psi inputs:** all valid files are on disk at T2_CH_CERN. DAS shows Charmonium Run2016H at 97.6 % block
   completion because one of its 42 blocks is empty (0 files); all 122 files are at T2_CH_CERN.
 

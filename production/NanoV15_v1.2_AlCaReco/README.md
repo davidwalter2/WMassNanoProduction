@@ -118,7 +118,8 @@ depend on the number of threads. Both run with 2 threads: 1 thread would leave t
     (`rucio update-rule --lifetime <seconds> <rule id>`) if the production runs longer. The four datasets that
     were on disk first (MuOnia Run2016F and G, Upsilon Pt0to8 and Pt13toInf) were submitted on 2026-10-26
     with `-m '/MuOnia/Run2016[FG]-'` and `-m '/Upsilon_MultiResonanceFilter_Pt(0to8|13toInf)-'`; MuOnia Run2016H
-    and Upsilon Pt8to13 follow with `-m '/MuOnia/Run2016H-'` and `-m '/Upsilon_MultiResonanceFilter_Pt8to13-'`;
+    and Upsilon Pt8to13 on 2026-10-26, when their recall had completed, with `-m '/MuOnia/Run2016H-'` and
+    `-m '/Upsilon_MultiResonanceFilter_Pt8to13-'`;
   - the jobs run at T2_US_MIT, which reads its own data through the ESnet XCache
     (`bost-cms-xcache01.lhcone.es.net`); for local tests use `root://t2dsk0011.cmsaf.mit.edu/`, as the
     `xrootd.cmsaf.mit.edu` redirector can refuse files that are on disk.

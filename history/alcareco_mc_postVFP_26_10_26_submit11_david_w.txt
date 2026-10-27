@@ -21,3 +21,5 @@ Task name: 261026_180445:dwalter_crab_Upsilon_MultiResonanceFilter_Pt8to13-pythi
 Project dir: crab_projects/crab_Upsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_v1p2
 Please use ' crab status -d crab_projects/crab_Upsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_v1p2 ' to check how the submission process proceeds.
 Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_Upsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_v1p2/crab.log
+
+Resubmission 2026-10-27 14:52 UTC: the 1 job of the Pt8to13 task that failed in the post-job ("Failure during post-job execution"), with crab resubmit.

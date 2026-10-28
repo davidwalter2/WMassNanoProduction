@@ -216,6 +216,12 @@ config.Data.lumiMask = 'crab_projects/crab_<task>/results/notFinishedLumis.json'
 
 Then `crab submit -c submit<name>_rec1.py`. It writes to the same output tag (a new timestamp directory).
 
+Use a recovery task rather than `crab resubmit` also when `crab status` shows `Status on the scheduler: FAILED`:
+CRAB then accepts a resubmission (the server goes back to `SUBMITTED`) but does not apply it, and the jobs keep
+their old attempts (2026-10-27/28, calibration Run2016F). The old task has no running jobs then, so `crab report`
+can be run directly. Check that `notFinishedLumis.json` and `processedLumis.json` do not overlap and together
+give `lumisToProcess.json`.
+
 ## 6. Completion checks (per task)
 
 1. `crab report -d <dir>`: the events read must equal the DAS events of step 0; for a recovered task, add up the task

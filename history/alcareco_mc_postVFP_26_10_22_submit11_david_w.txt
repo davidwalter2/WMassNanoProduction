@@ -57,3 +57,6 @@ Task name: 261022_233530:dwalter_crab_JPsiToMuMu_Pt8toInf-pythia8_TkAlJpsiMuMuCa
 Project dir: crab_projects/crab_JPsiToMuMu_Pt8toInf-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_ext1_v1p2
 Please use ' crab status -d crab_projects/crab_JPsiToMuMu_Pt8toInf-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_ext1_v1p2 ' to check how the submission process proceeds.
 Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_JPsiToMuMu_Pt8toInf-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_ext1_v1p2/crab.log
+
+
+2026-10-30 10:57 UTC, batch 3 of the calibration rerun (the failed jobs' outputs were lost in the T3_US_MIT outage of 2026-10-23/25; the schedulers of these tasks are FAILED, so recovery tasks, make_rec.py with maxMemoryMB 5000; outputs of failed jobs at T3 quarantined first: Pt0to8 ext1 job 9, Pt8toInf jobs 3, 37, 40, 41, 53, 62, 228, 248, 251, 252, 265, 268, 304, 318, 330, 376, 450, 451): Pt0to8 (19229 lumis) task 261030_105753:dwalter_crab_JPsiToMuMu_Pt0to8-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_v1p2_rec1; Pt0to8 ext1 (46294 lumis) task 261030_105828:dwalter_crab_JPsiToMuMu_Pt0to8-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_ext1_v1p2_rec1; Pt8toInf (74011 lumis) task 261030_105903:dwalter_crab_JPsiToMuMu_Pt8toInf-pythia8_TkAlJpsiMuMuCalib_MCPostVFP_v1p2_rec1.

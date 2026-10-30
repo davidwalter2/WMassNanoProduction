@@ -222,6 +222,11 @@ their old attempts (2026-10-27/28, calibration Run2016F). The old task has no ru
 can be run directly. Check that `notFinishedLumis.json` and `processedLumis.json` do not overlap and together
 give `lumisToProcess.json`.
 
+Before a recovery task, move away the output files of the task's FAILED jobs that are at T3_US_MIT: a job can
+fail after its output was transferred (the 403 case above), and the recovery task reprocesses its lumis, so the
+file would duplicate events. In 2026-10 they were moved to `/store/group/zmass/NanoAOD_quarantine/` (same
+relative path): Run2016G calibration jobs 374 and 392, Run2016H jobs 140, 154, 200, 435, 545 and 549.
+
 ## 6. Completion checks (per task)
 
 1. `crab report -d <dir>`: the events read must equal the DAS events of step 0; for a recovered task, add up the task

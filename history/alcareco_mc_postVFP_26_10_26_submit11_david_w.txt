@@ -24,3 +24,4 @@ Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_
 
 Resubmission 2026-10-27 14:52 UTC: the 1 job of the Pt8to13 task that failed in the post-job ("Failure during post-job execution"), with crab resubmit.
 2026-10-28 21:19 UTC: the 1 job of the Pt8to13 task recovered with crab_submit/submitUpsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_rec1.py, task 261028_211929:dwalter_crab_Upsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_v1p2_rec1 (lumi mask = its 664 unfinished lumis; the resubmission of 2026-10-27 was not applied, scheduler status FAILED).
+2026-10-29 10:26 UTC: the Pt8to13 recovery submitted again after CRAB accepted submissions: task 261029_102601:dwalter_crab_Upsilon_MultiResonanceFilter_Pt8to13-pythia8_TkAlUpsilonMuMu_MCPostVFP_v1p2_rec1 (1/1 finished). No output of the failed job was at T3. The Upsilon MC is complete.

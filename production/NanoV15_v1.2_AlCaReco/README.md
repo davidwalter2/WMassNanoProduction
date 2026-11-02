@@ -225,7 +225,9 @@ give `lumisToProcess.json`.
 Before a recovery task, move away the output files of the task's FAILED jobs that are at T3_US_MIT: a job can
 fail after its output was transferred (the 403 case above), and the recovery task reprocesses its lumis, so the
 file would duplicate events. In 2026-10 they were moved to `/store/group/zmass/NanoAOD_quarantine/` (same
-relative path): Run2016G calibration jobs 374 and 392, Run2016H jobs 140, 154, 200, 435, 545 and 549.
+relative path): Run2016G calibration jobs 374 and 392, Run2016H jobs 140, 154, 200, 435, 545 and 549, and later
+those of the recovery tasks, 121 files in all. They were deleted after the completion checks (every output tag
+has exactly the DAS events without them).
 
 ## 6. Completion checks (per task)
 

@@ -237,7 +237,9 @@ relative path): Run2016G calibration jobs 374 and 392, Run2016H jobs 140, 154, 2
    ```sh
    python3 -c "import ROOT, glob, sys; fs = glob.glob(sys.argv[1]); n = ROOT.RDataFrame('Runs', fs).AsNumpy(['nCvhParm'])['nCvhParm']; print(len(fs), 'files', len(n), 'runs, nCvhParm', n.min(), '-', n.max())" '<output dir>/*/*/*.root'
    ```
-   It must print `nCvhParm 116972 - 116972`.
+   It must print `nCvhParm 116972 - 116972`, or `0 - 116972` when some runs of a file have no events in it (a job
+   that opens a run again for lumis without selected events writes an empty catalog for that stretch); every run
+   with events must have the full catalog.
 4. Calibration version, data: `aggregategrads.py` reads the files. On submit82, as it needs about 55 GB of memory
    (the Hessian of 116972 parameters), in an empty directory:
    ```sh
@@ -247,7 +249,8 @@ relative path): Run2016G calibration jobs 374 and 392, Run2016H jobs 140, 154, 2
      python3 <MuonMomentumScaleCalibration>/Analysis/aggregategrads.py 5
    ```
    `<MuonMomentumScaleCalibration>` is a clone of davidwalter2/MuonMomentumScaleCalibration with its `narf` submodule.
-   The argument limits it to 5 files. It must print `input format: calibration NanoAOD` and
+   The argument limits it to 5 files; it skips empty catalogs (`N of M Runs entries empty ..., ignored`). It must
+   print `input format: calibration NanoAOD` and
    `parameter catalog: 116972 parameters`, and it writes `combinedgrads.hdf5` and `runtree.root`. It applies the 2016
    golden JSON, so it selects nothing in MC.
 5. Commit the history files on a branch (`history-NanoV15_v1.2_AlCaReco-$USER`) and open a PR to

@@ -21,3 +21,5 @@ Task name: 261028_125522:dwalter_crab_MuOnia_Run2016H-TkAlUpsilonMuMu-31Aug2023_
 Project dir: crab_projects/crab_MuOnia_Run2016H-TkAlUpsilonMuMu-31Aug2023_UL2016_WMass-v1_v1p2
 Please use ' crab status -d crab_projects/crab_MuOnia_Run2016H-TkAlUpsilonMuMu-31Aug2023_UL2016_WMass-v1_v1p2 ' to check how the submission process proceeds.
 Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_patch2/src/Configuration/WMassNanoProduction/crab_submit/crab_projects/crab_MuOnia_Run2016H-TkAlUpsilonMuMu-31Aug2023_UL2016_WMass-v1_v1p2/crab.log
+
+2026-11-02 20:53 UTC: complete. Completion checks on the files at T3_US_MIT (prod_NanoV15_v1.2_alcareco/completion_checks.py): every output tag has exactly the DAS events of its input datasets (so no file missing or duplicated), no unreadable file, every directory readable; in the calibration version the parameter catalog has 116972 parameters in every run with events (51 empty Runs entries in 43 Run2016G and H files are runs without events in their file). aggregategrads.py (nano mode, with the empty entries skipped) reads the calibration files.

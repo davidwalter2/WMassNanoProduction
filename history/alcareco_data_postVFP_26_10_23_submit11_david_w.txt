@@ -49,3 +49,5 @@ Log file is /work/submit/david_w/ZMass/prod_NanoV15_v1.2_alcareco/CMSSW_15_0_19_
 
 Resubmission 2026-10-25 21:00 UTC: the 203 failed jobs of the three tasks above with crab resubmit. Their outputs were lost in the T3_US_MIT transfer outage of 2026-10-23 04:00 to 2026-10-25 ~12:00 UTC (stage-out failures, mostly exit codes 60325 and 60328).
 Resubmission 2026-10-26 18:05 UTC: the 7 jobs of the Run2016H task that failed again in stage-out (exit codes 60328 and 60325), with crab resubmit.
+
+2026-11-02 20:53 UTC: complete. Completion checks on the files at T3_US_MIT (prod_NanoV15_v1.2_alcareco/completion_checks.py): every output tag has exactly the DAS events of its input datasets (so no file missing or duplicated), no unreadable file, every directory readable; in the calibration version the parameter catalog has 116972 parameters in every run with events (51 empty Runs entries in 43 Run2016G and H files are runs without events in their file). aggregategrads.py (nano mode, with the empty entries skipped) reads the calibration files.
